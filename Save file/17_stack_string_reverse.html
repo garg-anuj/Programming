@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>  
+
+
+// ---2nd way By Me ****----------------------------------------------------------------------------------
+
+let data2 = 'superman';
+
+function newType(data){
+
+    let temp;
+    let s=0;
+    let e=data.length-1;
+    data = data.split('')
+
+    return reverse(s,e,data)
+}
+
+
+function reverse(s,e,data){
+
+    console.log("head", s,e, data)
+
+    if(s <= e){
+        temp = data[s];
+        data[s] = data[e]
+        data[e] = temp;
+        reverse(s+1,e-1,data)
+    }
+
+    console.log("Tail",s,e, data)
+
+    return data.join('')
+
+}
+
+// newType(data)
+console.log(newType(data2))
+
+
+</script>
+
+<!-------------1st Way By me------------------------------------------------------------------------------------------------>
+
+<script>
+let data = 'superman'
+ data = data.split('')
+let temp;
+console.log(data)
+
+function reverse(s,e,data){
+     console.log(s,e, data)
+    if(s <= e){
+        temp = data[s];
+        data[s] = data[e]
+        data[e] = temp;
+        reverse(s+1,e-1,data)
+    }
+    console.log("Tail",s,e, data)
+    return data.join('')
+
+    // console.log(data)
+}
+
+// reverse(0,data.length-1,data);
+console.log(reverse(0,data.length-1,data))
+
+
+// function pop(){
+//     data.length = data.length-1;
+// }
+
+console.log(data);
+
+</script>
+
+
+<!------3rd Method By Csbs----------------------------------------------------------------------------------------------------- -->
+
+
+<!--     
+<script>
+    let data =[];
+    let currentSize=data.length;
+    function push(newVal){
+       data[currentSize]=newVal;
+       currentSize+=1;
+    }
+    function pop(){
+       lastRemovedItem=data[currentSize-1];
+       currentSize-=1;
+       data.length=currentSize;
+       return lastRemovedItem;
+    }
+
+    function reverseStr(item){
+       for(let i=0;i<item.length;i++){
+           push(item[i])
+       }
+       for(let i=0;i<item.length;i++){
+       item[i]=pop();
+       }
+       
+    }
+
+   
+    let str="anil";
+    str=str.split("");
+    reverseStr(str)
+    console.warn(str.join(""))
+
+   </script> -->
+
+</body>
+</html>
+
+
