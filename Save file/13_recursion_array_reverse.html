@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>  
+        let data = [5,12,65,89,0];
+        let temp;
+        //s start e end 
+
+        function reverseArray(s,e,data1){
+
+            // console.log(data1[0])
+            console.log("Head",s,e,data1)
+            if(s<=e){
+
+            temp = data1[s];
+            data1[s] = data1[e];
+            data1[e] = temp;
+            reverseArray(s+1,e-1,data);
+            // return data1;
+
+            }
+            console.log("tail",s,e,data1)
+
+           
+        }
+
+        reverseArray(0,data.length-1,data);
+        // console.log(reverseArray(data,0,data.length-1))
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // function factorial(x){    
+        //     if(x===0){
+        //         return 1;
+        //     }
+        //     return x*factorial(x-1);
+  
+        // }
+
+        // let data = 5; 
+        // console.log(factorial(data))
+        
+        // // console.log(factorial(5))
+        // // console.log(5*factorial(5-1))
+        // // console.log(5*4*factorial(4-1))
+        // // console.log(5*4*3*factorial(3-1))
+        // // console.log(5*4*3*2*factorial(2-1))
+        // // console.log(5*4*3*2*1*factorial(1-1))
+        // // console.log(5*4*3*2*1*1)
+
+
+
+
+        function decrement(x){
+            console.log(x)
+            if(x===0){
+            return 0;
+            }
+            
+            return x+decrement(x-1);
+          
+        }
+        console.log('total',decrement(10))
+        
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>  
+
+    // let Totalmoney = 100;
+    // let apple = 0;
+
+
+    // function BuyApple(money){
+    //     if(money>0){
+    //         console.log(' i have',money ,'Rs', apple,'apple')
+    //         buyMore(money)
+    //     }else{
+    //         console.log('No money Left', apple, 'apple')
+    //     }
+
+    // }
+
+    // function buyMore(x){
+    //     // console.log(x-5)
+    //     apple = apple+1;
+    //     return BuyApple(x-10);
+    // }
+    
+
+    // BuyApple(100)
+
+    // ---------------------------------------------------------------
+
+let start  = 0;
+    function showNum(x){
+        // console.log('Top', x)
+        if(x<=10){
+            console.log('Middle if',x)
+            increment(x)
+        }
+        // console.log('bottom = ',x)
+    }
+
+    function increment(inc){
+        // inc = inc+1
+        // console.log('inc',inc)
+        return showNum(inc+1)
+        // console.log('inc bottom',inc)
+    }
+
+    showNum(start)
+    // console.log(showNum(start))
+
+
+
+// ---------------------------------------------------------------------
+
+
+    function test(x){
+    // console.warn('top',x)
+    if(x>0){
+        test(x-1)
+    }
+    console.warn('bottom',x)
+   }
+   
+   let data=5;
+//    console.log(test(data))
+   test(data);
+  
+
+
+    </script>
+
+</body>
+</html>

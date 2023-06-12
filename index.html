@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <!--Short Method----------------------------------------------------------------------------------------------------------------------------------------------   -->
+
+  <script>  
+    let data1 = [5,12,65,89,0,1];
+    let data2 = [8,3,5,1,90,1,12];
+
+
+// this function  will add  an element to the last position of the array
+    function push(arrData){
+        let ele = parseInt(document.getElementById('item').value);   
+        arrData[arrData.length] = ele;
+        console.log("array position ",arrData.length , "element in it = ",ele )
+        console.log(arrData)
+    }
+
+
+// It will delete the last element of the array.
+    function pop(data){
+        if(data.length>0){
+            data.length=data.length-1;
+            console.log(data.length,data);
+        } else {
+            console.log('Array is Empty')
+        }
+    }
+// To display Current Array
+    function display(){
+        console.log('last',data1);
+    }
+
+</script>
+
+<input placeholder="inserElement" id="item">
+<button onclick=push(data1)>Add Element</button>
+<button onclick=pop(data1)>Delete Element</button>
+<button onclick=display()>Display Element</button>
+    
+
+</body>
+</html>
+
+

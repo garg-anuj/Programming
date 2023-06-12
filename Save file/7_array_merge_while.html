@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // arrange the both array in  assending order then we we get the result in assending order during sorting0
+      
+        let data1 = [15,30, 40, 45, 58, 78]
+        let data2 = [15,38,50,70];
+        let data3 = []
+        let d1=0;
+        let d2=0;
+        let d3=0;
+        
+
+        while(d1<data1.length && d2<data2.length){
+            // console.log(d1, d2 ,d3)
+         
+            if(data1[d1]<data2[d2]){
+                data3[d3]=data1[d1];
+                console.log("if = ",data3)
+                d1++;
+        
+            } else {
+                data3[d3] = data2[d2]
+                console.log('else = ', data1)
+                d2++
+           
+            }
+            d3++
+           
+     
+        }
+        console.log('d1 d2 d3',d1,d2,d3)
+        console.log('1st while', data3)
+
+
+        while(d1<data1.length){
+                data3[d3] = data1[d1]
+                d3++
+                d1++
+            }
+
+            // we can use any loop here 
+
+
+
+        // for(d1; d1<data1.length; d1++){
+        //     data3[d3] = data1[d1];
+        //     d3++
+        // }
+
+        console.log('2nd Final', data3)
+ 
+
+
+     
+    </script>
+
+</body>
+</html>

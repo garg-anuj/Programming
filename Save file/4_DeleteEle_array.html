@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+    function deleteEle(){
+        let data = [60,30,50,15,55,45];
+        // let position = '3';
+        let position = parseInt(document.getElementById('position').value);
+
+        for (let i=position; i<data.length-1; i++){
+            // document.write(`<br> ${data[i]}`)
+         
+                data[i]=data[i+1]
+        }
+        data.length=data.length-1;
+        document.write(`<br> ${data}`)
+        console.log(data)
+    }
+
+
+// ------2nd Method--------------------------------------------------
+// function deleteEle(){
+//         let data = [60,30,50,15,55,45];
+//         // let newEl =70;
+//         let position = 2;
+
+//         for (let i=position; i<data.length-1; i++){  
+//             if(i>=position){
+//                 data[i]=data[i+1]
+//             }  
+               
+//         }
+//         data.length=data.length-1;
+//         document.write(`<br> ${data}`)
+//         console.log(data)
+//     }
+     
+    </script>
+
+<input type="text" placeholder="Enter Position" id="position">
+<button onclick=deleteEle()>insert me</button>
+
+
+</body>
+</html>

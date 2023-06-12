@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+// let data = [60,30,50,15,55,45,15];
+//         let serchEle = 15;
+//         let index = [];
+ 
+//         for (let i =0;  i<=data.length-1;  i++  ){
+
+//             if(data[i]===serchEle){
+//                 index.push(i);
+//                 console.log(i)
+//             }   
+//         }
+//         document.write(index)
+//         console.log(data)
+//         console.log("element position = ",index);
+
+function serchEle(){
+    let data = [60,30,50,15,55,45];
+        let serchEle =parseInt(document.getElementById('element').value);
+        let index = undefined;
+ 
+        for (let i =0;  i<=data.length-1;  i++  ){
+
+            if(data[i]===serchEle){
+                index =i
+                console.log(i)
+                break;
+            }  
+        }
+    
+        console.log(data)
+        console.log("element position = ",index);
+}
+
+     
+    </script>
+
+<input placeholder="Enter serch Element" id="element">
+<button onclick=serchEle()>Serch Element</button>
+
+
+</body>
+</html>
