@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    let data =  [1,2,4,3]
+    let max =6;
+
+    function enquee(){
+   
+        let newEle =parseInt(document.getElementById('inputBox').value);
+        if (data.length>=max){
+            alert('Queue is full')
+           
+        } else{
+            data[data.length] = newEle
+            console.log(data)
+        }     
+    }
+
+
+function dequee(){
+    if(data.length>0){
+        for(let s=0; s<data.length; s++){
+        data[s]=data[s+1]
+    }  
+  
+    data.length = data.length-1;
+    console.log(data)
+    }else {
+        console.log('Queue is empty')
+    }    
+}
+
+function front(){
+    if(data.length>0){
+        console.log(data[0])
+    }else{
+        console.log('Queue is empty So No front in Queue')
+    }
+}
+
+function back(){
+    // if(data.length>0){
+        if(!isEmpty()){
+        console.log(data[data.length-1])
+    }else{
+        console.log('Queue is empty So No Back in Queue')
+    }
+
+}
+
+
+function isEmpty(){
+    if(data.length<=0){
+        return true;
+    } else{
+        return false;
+    }
+}
+
+     
+</script> 
+
+<input type="text" placeholder="Enter any  number" id='inputBox' >
+<button onclick=enquee()>Equee</button>
+<button onclick=dequee()>denquee</button>
+<button onclick=front()>Front</button>
+<button onclick=back()>Back</button>
+
+</body>
+</html>
+
+
