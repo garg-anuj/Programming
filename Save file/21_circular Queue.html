@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    class Queue{
+        constructor(max){
+            this.size = max;
+            this.data = new Array(max)
+            this.rear = -1
+            this.front = -1
+
+              
+        }
+
+        enquee(newEle){
+            console.log(this.front, this.rear, this.data)
+
+            if ((this.rear+1)%5 == this.front){
+                console.log('Queue is full', "front ",this.front,"tail ", this.rear)
+            } 
+
+            else if(this.front==-1){
+                this.front=0;
+                this.rear=0;
+                this.data[this.rear]=newEle;
+                console.log(this.data)
+            }
+
+
+            else {
+
+                this.data[this.rear+1] = newEle;
+            //   console.log("rear value = ",this.rear,this.data)
+            this.rear++
+            console.log("rear value = ",this.rear,this.data)
+            }
+
+
+
+
+
+        }
+
+        dequee(){
+            //posible conditions  front 1   on click 2  3 4 5
+            // if this.front==null then alredy empty
+          
+            if(this.front==-1){
+                // console.log(this.front)
+                console.log('Empty')
+
+            }
+
+            else if(this.front==this.rear){
+                //we can store that last or left element in th temp
+                    // console.log("T",this.front ,"=",this.rear )
+                    
+                   
+                    this.front = -1;
+                    this.rear= -1 ;
+                    console.log("M",this.front)
+                  
+                } 
+                else{
+                    this.data[this.front]=null;
+                this.front++ 
+                console.log("bottom",this.front, this.data)
+                }  
+        }
+
+
+        display(){
+            console.log(this.data)
+        }
+    }
+
+
+
+    let queue = new Queue(5);
+
+    // console.log(this.data)
+    queue.enquee(12)
+    queue.enquee(14)
+    queue.enquee(12)
+    queue.enquee(34)
+    queue.enquee(62)
+ 
+  
+
+
+    //  queue.dequee()
+    //  queue.dequee()
+    //  queue.dequee()
+    //  queue.dequee()
+    //  queue.dequee()
+    //  queue.dequee()
+
+     queue.display()
+
+
+   
+</script> 
+
+</body>
+</html>
+
+
