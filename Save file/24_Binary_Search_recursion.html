@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+
+
+let data =[1,2,3,4,5,6,7,8,9,10];  
+    let s = 0;   let e = data.length-1;
+    let pos;
+
+
+    function serch(data,s,e,ele){
+        let find = ele;
+        mid=Math.floor((s+e)/2);
+
+        if(data[mid]===find)
+        {
+            pos =mid
+            console.log('value position',pos)
+        }
+        else if(find<data[mid]){
+             e=mid-1
+            serch(data,s,mid-1,ele) 
+            
+        }
+        else{
+            s= mid+1;
+            serch(data,mid+1,e,ele) 
+        }
+
+        // if(data[mid]!==find){
+        //     serch(data,s,e,ele)
+            
+        // }
+        
+        // console.log(pos)
+    }
+
+    serch(data,s,e,1)
+    serch(data,s,e,2)
+    serch(data,s,e,3)
+    serch(data,s,e,4)
+    serch(data,s,e,5)
+    serch(data,s,e,6)
+    serch(data,s,e,7)
+    serch(data,s,e,8)
+    serch(data,s,e,9)
+    serch(data,s,e,10)
+ 
+    console.log(s,e,data,pos)
+ 
+
+
+
+
+//------My first Approch------------------------------------------------------------------------------
+
+    // let data =[1,2,3,4,5,6,7,8,9,10];  
+    // let s = 0;   let e = data.length-1;
+    // let pos;
+
+
+    // function serch(data,s,e,ele){
+    //     let find = ele;
+    //     mid=Math.floor((s+e)/2);
+
+    //     if(data[mid]===find)
+    //     {
+    //         pos =mid
+    //         console.log('value position',pos)
+    //     }
+    //     else if(find<data[mid]){
+    //         e=mid-1
+    //     }
+    //     else{
+    //         s= mid+1;
+    //     }
+
+    //     if(data[mid]!==find){
+    //         serch(data,s,e,ele)
+            
+    //     }
+        
+    //     // console.log(pos)
+    // }
+
+    // serch(data,s,e,1)
+    // serch(data,s,e,2)
+    // serch(data,s,e,3)
+    // serch(data,s,e,4)
+    // serch(data,s,e,5)
+    // serch(data,s,e,6)
+    // serch(data,s,e,7)
+    // serch(data,s,e,8)
+    // serch(data,s,e,9)
+    // serch(data,s,e,10)
+ 
+    // console.log(s,e,data,pos)
+ 
+
+</script> 
+
+</body>
+</html>
+
+
