@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // let data = [5, 9, 13, 17,45,67,89,100];
+    function serch(ele){
+
+    let data =[1,2,3,4,5,6,7,8,9,10];  let find = ele;
+    let s=0;   let e = data.length-1;    let pos;
+
+     
+    for(let s=0; s<=e; ){
+
+        let mid =  Math.floor((s+e)/2)
+        console.log("top start end mid",s,e,mid)
+
+        if(data[mid] ===find){
+            pos = mid
+            console.log(`find ${find} starts=${e} , End=${e}, Mid=${mid}, MidData=${data[mid]}`)
+            break;
+        }
+        else if(find<data[mid]){
+            e=mid-1
+        }
+        else{
+            s= mid+1;
+        }
+    }
+
+    }
+
+    serch(2)
+    // serch(3)
+    // serch(4)
+    // serch(5)
+    // serch(6)
+    // serch(7)
+    // serch(8)
+
+
+
+
+// ----Wrong Methid------------------------------------------------------------------------------------
+
+// function serch(ele){
+//     let data =[1,2,3,4,5,6,7,8,9,10]
+// // let find = 5,6
+// let find = ele;
+// let s=0;
+// let e = data.length-1;
+
+// let pos;
+// // console.log(e)
+
+// for(let s=0; s<=e; ){
+//     //   console.log("start End ",s,e)
+//     let mid =  Math.floor((s+e)/2)
+    
+//   console.log("top",s,e,mid)
+//     if(data[mid] ===find){
+//         pos = mid
+//         console.log(`$find ${find} starts=${e} , End=${e}, Mid=${mid}, MidData=${data[mid]}`)
+//           break;
+//     }
+    
+//     else if(find<data[mid]){
+//         // console.log("check in left hand",s,e, mid)
+//         // e=e-mid;
+//         // console.log("starting to end",s,e)
+//         // break;
+//     }
+//     else{
+//         //  console.log("check in Right hand",s,e, mid)
+//         s=s+mid
+//         // console.log("starting to end",s,e)
+//         // break;
+//     }
+// }
+// }
+
+// serch(2)
+// // serch(3)
+// // serch(4)
+// // serch(5)
+// // serch(6)
+// // serch(7)
+// // serch(8)
+
+
+</script> 
+
+</body>
+</html>
+
+
