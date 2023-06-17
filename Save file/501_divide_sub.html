@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function formula(n){
+            // no of elements
+            let N = 64;
+            //  p==partation 
+            let p = N/n;
+            console.log(p)
+            //r repeatation;
+            let r = ((n*n)+n)/2
+            console.log(r*p*p)
+            return r;
+        }
+
+        formula(2)
+        formula(1)
+        formula(2)
+        formula(4)
+        formula(8)
+        formula(16)
+        formula(32)
+    </script>
+    
+</body>
+</html>

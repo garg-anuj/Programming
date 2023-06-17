@@ -10,6 +10,90 @@
 
 <script>
 
+// -----2nd try and ✔----------------------------------------------------------------------------
+
+
+let data =[12,11, 13, 5, 6,22]
+// let data =[12,11, 13, 5, 6,22,4,7,4,3,21,1]
+    let temp;
+    for(let i=1; i<data.length; i++)
+    {
+        // for(let j=0; j<data.length; j++)
+        let ele = data[i]
+        // console.log('')
+        // console.log('loop',i,data[i])
+        console.log('loop')
+        
+        for(let j=i-1; (j<=i && j>=0);)
+        {
+                if(ele<data[j])
+                {
+                    // console.log(i,j,data[i],data[j],"swap" )
+                    temp =data[j+1]
+                    data[j+1] = data[j]
+                    data[j] = temp;
+                    console.log(i,j,data,data[i],data[j],"swap");
+                    // break;
+                    
+                } 
+                else
+                {
+                    console.log('no swap',i,j, data[i],data[j])
+                }
+
+                // console.log(i,j)
+                j--;
+        }
+
+    }
+
+       console.log(data)
+    
+
+
+// ----------1st try---------------------------------------------------------------------
+
+
+
+
+
+    // let data =[12,11, 13, 5, 6,22]
+    // let temp;
+    // for(let i=1; i<data.length; i++)
+    // {
+    //     // for(let j=0; j<data.length; j++)
+    //     // let ele = data[i]
+    //     // console.log('')
+    //     // console.log('loop',i,data[i])
+    //     console.log('loop')
+        
+    //     for(let j=i-1; (j<=i && j>=0);)
+    //     {
+
+    //             if(ele<data[j])
+    //             {
+    //                 console.log(i,j,data[i],data[j])
+    //                 temp =data[i]
+    //                 data[i] = data[j]
+    //                 data[j] = temp;
+    //                 console.log(i,j,data,"swap");
+    //                 // break;
+                    
+    //             } 
+    //             else
+    //             {
+    //                 console.log('no swap',i,j, data[i],data[j])
+    //             }
+
+    //             console.log(i,j)
+    //             j--;
+    //     }
+
+    // }
+    // console.log(data)
+    
+
+
 </script> 
 
 </body>
