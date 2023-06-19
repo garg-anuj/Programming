@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+function checkAnagram(str1,str2){
+    let objstr1 ={}
+    console.log(objstr1,'<br>')
+
+    if (str1.length!==str2.length)
+    {
+        return false
+    }
+    for (ele of str1){
+   
+        console.log('first = ',objstr1,objstr1[ele])
+
+        console.log("second = ",(objstr1[ele] || false))  // false means =0; value true means =1;
+        objstr1[ele] = (objstr1[ele] || false)+1   // with the help of this we can count how many time keyValue is repeating
+        console.log( 'third = ',objstr1[ele])
+
+        console.log('')
+
+        // objstr1[ele] = (objstr1[ele] || 0)+1  or objstr1[ele] = (objstr1[ele] || false)+1
+        
+    }
+    console.log('')
+
+    for (ele2 of str2)
+    { 
+        // so here we can remove/reduce  the elements if matching
+        console.log('T/f',(objstr1[ele2] || false))
+
+        if( (objstr1[ele2] || false) )
+        {//if element present then  we will remove the element 
+            //other wise we will add the element with the help of else
+            objstr1[ele2]--
+            console.log("remove ele ",objstr1)  
+            // return true; 
+            
+        }
+        else
+        {
+            // 3 way we will get same result
+
+            // objstr1[ele2] += 1
+            // objstr1[ele2] = (objstr1[ele2] || false)+1 
+            // objstr1[ele2]++
+            return false;
+        }
+        // return true;
+        
+        console.log('')
+           
+    }
+    // console.log(ele)
+    // return true; 
+    console.log(objstr1) 
+}
+
+console.log(checkAnagram('cat','tac'))
+
+
+// ------------if / else part ------------------------------------------------------------------------
+
+// function checkAnagram(str1,str2){
+//     let objstr1 ={}
+//     console.log(objstr1,'<br>')
+
+//     if (str1.length!==str2.length)
+//     {
+//         return false
+//     }
+//     for (ele of str1){
+   
+//         console.log('first = ',objstr1,objstr1[ele])
+
+//         console.log("second = ",(objstr1[ele] || false))  // false means =0; value true means =1;
+//         objstr1[ele] = (objstr1[ele] || false)+1   // with the help of this we can count how many time keyValue is repeating
+//         console.log( 'third = ',objstr1[ele])
+
+//         console.log('')
+
+//         // objstr1[ele] = (objstr1[ele] || 0)+1  or objstr1[ele] = (objstr1[ele] || false)+1
+        
+//     }
+
+//     console.log('')
+
+//     for (ele2 of str2){ 
+//         // so here we can remove/reduce  the elements if matching
+//         console.log('T/f',(objstr1[ele2] || false))
+
+//         if( (objstr1[ele2] || 0) )
+//         {//if element present then  we will remove the element 
+//             //other wise we will add the element with the help of else
+         
+//             objstr1[ele2] -= 1
+//             console.log(objstr1)
+     
+//         }
+//         else
+//         {
+//             // objstr1[ele2] += 1
+//             objstr1[ele2] = (objstr1[ele2] || false)+1 
+//         }
+        
+       
+//     }
+//     // console.log(ele)
+//     console.log(objstr1)
+
+  
+// }
+
+// // checkAnagram('cat','tac')
+// console.log(checkAnagram('catcp','taccr'))
+
+
+// // let object2 = {name:'garg'}
+// // console.log(object2)
+
+//====End===================================================================================
+
+
+
+
+// ----1st attempt wrong Method--------------------------------------------------------------------------
+
+    // let str = "cat";
+    // let check = ["t","a"]
+    // let data = str.split('')
+    // console.log(data)
+
+    // for(let i=0; i<check.length; i++){
+    //     console.log('')
+    //     console.log("check",check[i])
+     
+
+    //     for (let j=0; j<data.length; j++){
+    //         console.log("data",data[j])
+    //         if(check[i] === data[j]){
+    //             console.log(i,check[i],"match")
+    //         }else{
+    //             console.log(`ele ${check[i]} is not found in data`)
+    //         }
+    //     }
+    // }
+
+
+
+</script> 
+
+</body>
+</html>
+
+
