@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    let name ="Ram"   
+
+    let data ={
+        name:'harsh',
+        age:28,
+        31:'11',
+        getData:function(){
+            return this.name;
+        }
+    }
+
+    console.log(data.getData())
+    console.log(data.name)
+    // console.log(Object(data.name))
+    console.log(Object.keys(data))
+    console.log(Object.values(data))
+    console.log(Object.entries(data))
+    console.log(data['31']) // wrong
+
+</script> 
+
+</body>
+</html>
+
+
