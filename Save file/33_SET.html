@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <script>
+        let data = new Set(["anil","peter","anil"]);
+        data.add({"email":"test@test.com"})
+        console.warn(data.has("peter1"))
+        
+        data.delete('anil');
+        console.warn(data);
+
+        console.log('1')
+        for(x of data){
+            console.warn(x)
+        }
+
+        console.log('2')
+        data.forEach((val,key)=>{
+            console.warn(val,key)
+        })
+        console.warn(data.entries())
+      
+    </script>
+    
+</body>
+</html>
