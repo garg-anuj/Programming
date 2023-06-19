@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+let result;
+    function paledron(data)
+    {
+        // let data = str1.split("")
+        let e = data.length-1;
+       
+        for(let i= 0; i<=e; i++)
+        {
+            console.log(i,data[i],data[e-i],(e-i))
+
+            if(data[i] === data[e-i]){
+                console.log("Matching")
+                result = "String is palindrome"
+            }else{
+                // return "No Match";
+                result ="String is Not palindrome"
+            }
+        }
+        return result;
+    }
+
+    paledron("rrpprr")
+    console.log(paledron("tommot"))
+    console.log(result)
+
+
+</script> 
+
+</body>
+</html>
+
+
