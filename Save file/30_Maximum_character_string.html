@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function MaxChr(data)
+    {
+        let objstr ={}
+        let max = 0;
+        let ele; 
+
+        for(let i=0; i<data.length; i++){
+            console.log(i,data[i])
+            console.log("")
+
+            // console.log(i,data[i])
+            // let key = data[i];
+            // console.log("key = ",key)
+
+            objstr[data[i]] = (objstr[data[i]] || false)+1
+            console.log(objstr)
+
+            if(objstr[data[i]]>max){
+                max =objstr[data[i]]; ele=data[i];
+            }
+        }
+        return [max,ele];   
+    }
+
+    console.log("Answer",MaxChr("rrrrram"))
+
+
+
+
+//-----------1st attempt me-----------------------------------------------------------------------------------------
+
+    // function MaxChr(data)
+    // {
+    //     let objstr ={}
+    //     let max=0;
+    //     let l;
+    //     for(ele of data){
+    //         console.log(ele)
+    //         objstr[ele] =(objstr[ele] || false)+1
+    //     }
+    //     console.log(objstr)
+
+    //     for(let ele1 in objstr)
+    //     {
+    //         console.log(ele1,objstr[ele1])
+    //         if(objstr[ele1]>max)
+    //         {
+    //             max = objstr[ele1],ele;
+    //             // l = ele;
+    //             // console.log("max",max)
+    //         }
+
+    //     }
+    //     return {max1:max, alpha:ele};
+     
+    // }
+
+    // console.log("Answer",MaxChr("rramssss"))
+    
+ 
+
+
+</script> 
+
+</body>
+</html>
+
+
