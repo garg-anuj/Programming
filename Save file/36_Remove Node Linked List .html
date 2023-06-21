@@ -1,37 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
+
 <body>
 
 <script>
 
-let data = [30,13,45,9,78,2,9,5,50];
-    let get = 9;
-    // let get = 99;
-    let pos;
+class List {
+        constructor(data)
+        {
+            this.head=
+            { 
+                value:data,
+                next:null
+            }
+           this.tail =this.head
+           //this.tail.next =800
+           this.size=1;
+        }
 
-    for (let s=0; s<data.length; s++){
-        // console.log(data[s])
-        if(data[s]==get){
-            pos =s;
-            console.log('positon of element' ,get,"is",pos)
-        } 
+        appendNode(Nodedata)
+        {
+            // console.log();
+            let newNode = 
+            {
+                value:Nodedata,
+                next:null
+            }
+            this.size+=1
+            this.tail.next = newNode;
+            this.tail=newNode;
+            // console.log(Nodedata,this.head)
+        }
+
+
+        traversing(){
+            // let counter = 0;
+            let currenNode =  this.head;
+            console.log('all', currenNode)
+    //working-------------------------------
+            // console.log('1',currenNode.next)
+            // currenNode = currenNode.next
+            // console.log('2',currenNode.next)
+            // currenNode = currenNode.next
+            // console.log('3',currenNode.next)
+            // currenNode = currenNode.next
+            // console.log('4',currenNode.next)
+    //   ----------------------------------------      
+            for(let counter=0; counter<this.size; counter++)
+            {
+                // console.log(counter)
+                // console.log(this.head)
+                console.log(counter,currenNode)
+                currenNode=currenNode.next 
+            }
+        
+
+        }
+
+        deleteNode(index){
+            console.log('dele')
+            let currenNode =1;
+            let leadNode = this.head //
+            // let nextNode =
+
+            if(index===1){
+                leadNode = this.head.next;
+                console.log(leadNode)
+            }else{
+                for(let current =1; current<index-1; current++){
+                    // console.log(current,leadNode)
+                    leadNode= leadNode.next
+                    console.log("LeadNode",current,leadNode)
+                }
+            }
+
+            let nextNode = leadNode.next.next;
+            console.log(nextNode)
+            leadNode.next= nextNode;
+            console.log('f',leadNode)
+        
+        }
+
     }
 
-    if(pos){
-        console.log("element position is =", pos)
-    } else{
-        console.log("No is not found")
-    }
+    let lists = new List(222);
+    console.log(lists)
+    lists.appendNode(333)
+    lists.appendNode(444)
+    lists.appendNode(555)
+    lists.appendNode(666)
+    lists.appendNode(777)
 
+    // lists.traversing()
+    lists.deleteNode(3)
+    console.log(lists)
+
+    
 </script> 
 
 </body>
 </html>
-
-
