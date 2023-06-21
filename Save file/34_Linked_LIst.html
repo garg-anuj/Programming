@@ -10,11 +10,12 @@
         {
             this.head=
             { 
-                d:data,
+                value:data,
                 next:null
             }
            this.tail =this.head
            //this.tail.next =800
+           this.size=1;
         }
 
         appendNode(Nodedata)
@@ -25,6 +26,7 @@
                 value:Nodedata,
                 next:null
             }
+            this.size+=1
             this.tail.next = newNode;
             this.tail=newNode;
         }
