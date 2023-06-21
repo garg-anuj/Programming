@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+let data = [30,13,45,9,78,2,9,5,50];
+    let get = 9;
+    // let get = 99;
+    let pos;
+
+    for (let s=0; s<data.length; s++){
+        // console.log(data[s])
+        if(data[s]==get){
+            pos =s;
+            console.log('positon of element' ,get,"is",pos)
+        } 
+    }
+
+    if(pos){
+        console.log("element position is =", pos)
+    } else{
+        console.log("No is not found")
+    }
+
+</script> 
+
+</body>
+</html>
+
+
