@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<script>
+
+class List {
+        constructor(data)
+        {
+            this.head=
+            { 
+                value:data,
+                next:null
+            }
+           this.tail =this.head
+           //this.tail.next =800
+           this.size=1;
+        }
+
+        appendNode(Nodedata)
+        {
+            // console.log();
+            let newNode = 
+            {
+                value:Nodedata,
+                next:null
+            }
+            this.size+=1
+            this.tail.next = newNode;
+            this.tail=newNode;
+            // console.log(Nodedata,this.head)
+        }
+
+
+        traversing(){
+            // let counter = 0;
+            let currenNode =  this.head;
+            console.log('all', currenNode)
+    //working-------------------------------
+            // console.log('1',currenNode.next)
+            // currenNode = currenNode.next
+            // console.log('2',currenNode.next)
+            // currenNode = currenNode.next
+            // console.log('3',currenNode.next)
+            // currenNode = currenNode.next
+            // console.log('4',currenNode.next)
+    //   ----------------------------------------      
+            for(let counter=0; counter<this.size; counter++)
+            {
+                // console.log(counter)
+                // console.log(this.head)
+                console.log(counter,currenNode)
+                currenNode=currenNode.next 
+            }
+        
+
+        }
+    }
+
+
+
+    let lists = new List(222);
+    console.log(lists)
+    lists.appendNode(333)
+    lists.appendNode(444)
+    lists.appendNode(555)
+
+    lists.traversing()
+
+    
+
+ </script> 
+
+</body>
+</html>
+
+
