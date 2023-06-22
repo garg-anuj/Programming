@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<script>
+    class List {
+        constructor(data)
+        {
+            this.head=
+            { 
+                value:data,
+                next:null
+            }
+           this.tail =this.head
+           //this.tail.next =800
+           this.size=1;
+        }
+
+        appendNode(Nodedata)
+        {
+            // console.log();
+            let newNode = 
+            {
+                value:Nodedata,
+                next:null
+            }
+            this.size+=1
+            this.tail.next = newNode;
+            this.tail=newNode;
+            // console.log(Nodedata,this.head)
+        }
+
+// -----------------------------------------------------------------------------------
+        
+traversing()
+{
+            // let counter = 0;
+            let currenNode =  this.head;
+            console.log('all', currenNode)
+    //working-------------------------------
+            // console.log('1',currenNode.next)
+            // currenNode = currenNode.next
+            // console.log('2',currenNode.next)
+            // currenNode = currenNode.next
+            // console.log('3',currenNode.next)
+            // currenNode = currenNode.next
+            // console.log('4',currenNode.next)
+    //   ----------------------------------------      
+            for(let counter=0; counter<this.size; counter++)
+            {
+                // console.log(counter)
+                // console.log(this.head)
+                console.log(counter,currenNode)
+                currenNode=currenNode.next 
+            }
+        
+
+}
+
+       
+//  -----------------------------------------------------------------------------------       
+       
+deleteNode(index)
+{
+            console.log('dele')
+            let currenNode =1;
+            let leadNode = this.head //
+            // let nextNode =
+
+            if(index===1){
+                leadNode = this.head.next;
+                console.log(leadNode)
+            }
+            else
+            {
+                for(let current =1; current<index-1; current++){
+                    // console.log(current,leadNode)
+                    leadNode= leadNode.next
+                    console.log("LeadNode",current,leadNode)
+                }
+            }
+
+            let nextNode = leadNode.next.next;
+            console.log("NextNode",nextNode)
+            leadNode.next= nextNode;
+            console.log('f',leadNode)
+            this.size--
+        
+}
+// ------------------------------------------------------------------------------------
+       
+
+insertNode(position,ele)
+{
+            let insertedNode = {
+                value:ele,
+                next:null
+            }
+            let leftNode;
+            let leadNode = this.head
+
+            if(position===1)
+            {
+            
+                leftNode = this.head;   // isme sare node hai abhi
+                this.head = insertedNode
+                console.log('checkkk',insertedNode)
+                leadNode = insertedNode
+               
+                console.log('if 1',leadNode)  // now newNode become Lead Node then after that we will add rest nodes elements
+                // console.log(leadNode.next)
+
+                leadNode.next = leftNode
+                console.log(leadNode)
+                
+            }
+            else if(position===this.size+1){
+                console.log(this.size)
+                this.appendNode(position)
+                // this.tail=insertedNode;
+            }
+            else 
+            {
+                for (let start = 1; start<position-1; start++)
+                {
+                    leadNode = leadNode.next
+                    console.log(start,leadNode)
+                // console.log(insertedNode)
+
+                }
+
+                console.log('LeadNode',leadNode)
+                leftNode = leadNode.next;
+                console.log('LeftNode',leftNode)
+
+                leadNode.next=insertedNode
+                console.log('LeadNode',leadNode)
+
+                leadNode.next.next = leftNode
+                console.log("End",leadNode.next)
+            }
+            this.size++
+
+            console.log(this.size)
+
+        }  
+
+//  -------------------------------------------------------------------------------
+serchNode(val)
+        {
+
+            let currentNode = this.head;
+            // console.log(currentNode.next.next)
+            for(let start=1; start<=this.size; start++)
+            {
+                if(currentNode.value==val)
+                {   
+                    console.log(start,currentNode.value)
+                    console.log(currentNode)
+                }
+                else
+                {
+                    console.log('no match',currentNode.value)
+                    
+                }
+
+                currentNode = currentNode.next
+            } 
+        }
+
+}
+
+
+
+    let lists = new List(222);
+    console.log(lists)
+    lists.appendNode(333)
+    lists.appendNode(444)
+    lists.appendNode(555)
+    lists.appendNode(666)
+    lists.appendNode(777)
+
+    // lists.traversing()
+    // lists.deleteNode(0)
+    // console.log(lists)
+
+    // lists.insertNode(7,3000)
+    lists.serchNode(555)
+
+    console.log(lists)
+    
+
+</script> 
+
+</body>
+</html>
