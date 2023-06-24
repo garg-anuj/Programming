@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<script>
+
+let arr = [1,2,3,5,6];
+
+class Mymap
+{
+    constructor(ele)
+    {
+        this.value = ele
+        this.myfn = function(val)
+        {
+            console.log('hello');
+            return val;
+        }
+    }
+
+    //prototype
+    myMap1= function(callback){
+        console.log(callback)
+    let newArray1 = []
+    for(let i=0; i<data.length; i++)
+    {
+    console.log(data[i],i,data)
+    newArray1.push(data[i],i,data)
+    // console.log('Count = ',i,newArray1)
+    
+    }
+    return newArray1;
+    
+}
+
+
+}
+
+let data = new Mymap(arr)
+console.log(data.myfn(arr))
+// console.log(data.value)
+// data.myMap1((ele)=>{console.log(ele)})
+data.myMap1((ele)=>{console.log(ele)})
+
+
+
+
+// Mymap.prototype.myNewfn = function()
+//         {
+//             console.log('new prototype');
+//             return 111;
+//         }
+
+
+//         console.log(data.myNewfn())
+
+
+
+// let data1= arr.map((ele,i,list)=>{
+//     console.log(ele*2,i,list)
+//     return ele*ele
+   
+// })
+
+// console.log(data1)
+
+
+let myMap1= function(callback){
+    let newArray1 = []
+    for(let i=0; i<data.length; i++)
+    {
+    console.log(data[i],i,data)
+    newArray1.push(data[i],i,data)
+    // console.log('Count = ',i,newArray1)
+    
+    }
+    return newArray1;
+}
+
+// myMap1(arr)
+console.log('get',myMap1(arr))
+myMap1(arr)
+myMap1((ele,i)=>{
+    console.log(ele)
+})
+
+
+
+
+// function person(){}
+// // class person{}
+// let item;
+// person.prototype.myData = function(){return 'rokda';}
+// console.log(person.prototype.myData = function(){return 'rokda';})
+// console.log(person.myData())
+
+</script> 
+
+</body>
+</html>
